@@ -1,15 +1,6 @@
 {
   "products": [
     {
-      "id": "204bf3e6-6def-4965-91da-5f9455345d69",
-      "name": "bascianociao",
-      "brand": "cascasc",
-      "barcode": "12221",
-      "cost": "21",
-      "quantity": "21",
-      "price": "21"
-    },
-    {
       "id": "0c72c0dc-0871-434f-852f-a8d2b72e8b69",
       "name": "UNIQ ONE PACK TRATTAMENTO per capelli 10 in 1 150ml + MASCHERA 300ml REVLON",
       "brand": "Revlon professional",
@@ -20,17 +11,6 @@
     }
   ],
   "products-detail": [
-    {
-      "name": "bascianociao",
-      "brand": "cascasc",
-      "barcode": "12221",
-      "image": "234ewe",
-      "description": "avddvq",
-      "cost": "21",
-      "price": "21",
-      "quantity": "21",
-      "id": "204bf3e6-6def-4965-91da-5f9455345d69"
-    },
     {
       "id": "0c72c0dc-0871-434f-852f-a8d2b72e8b69",
       "name": "UNIQ ONE PACK TRATTAMENTO per capelli 10 in 1 150ml + MASCHERA 300ml REVLON",
