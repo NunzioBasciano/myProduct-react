@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "204bf3e6-6def-4965-91da-5f9455345d69",
+      "name": "bascianociao",
+      "brand": "cascasc",
+      "barcode": "12221",
+      "cost": "21",
+      "quantity": "21",
+      "price": "21"
+    },
+    {
+      "id": "0c72c0dc-0871-434f-852f-a8d2b72e8b69",
+      "name": "UNIQ ONE PACK TRATTAMENTO per capelli 10 in 1 150ml + MASCHERA 300ml REVLON",
+      "brand": "Revlon professional",
+      "barcode": "1234563123456",
+      "cost": "10",
+      "quantity": "12",
+      "price": "26.84"
+    }
+  ],
+  "products-detail": [
+    {
+      "name": "bascianociao",
+      "brand": "cascasc",
+      "barcode": "12221",
+      "image": "234ewe",
+      "description": "avddvq",
+      "cost": "21",
+      "price": "21",
+      "quantity": "21",
+      "id": "204bf3e6-6def-4965-91da-5f9455345d69"
+    },
+    {
+      "id": "0c72c0dc-0871-434f-852f-a8d2b72e8b69",
+      "name": "UNIQ ONE PACK TRATTAMENTO per capelli 10 in 1 150ml + MASCHERA 300ml REVLON",
+      "brand": "Revlon professional",
+      "barcode": "1234563123456",
+      "image": "https://www.hairbodystore.com/7014-large_default/uniq-one-pack-trattamento-per-capelli-10-in-1-150ml-maschera-300ml-revlon.jpg",
+      "description": "PACK UNIQ ONE TRATTAMENTO + MASCHERA  uniq ONE 150ml  TRATTAMENTO PER CAPELLI TUTTO IN UNO  Innovazione mondiale nella cura dei capelli.  La prima maschera spray senza risciacquo disponibile sul mercato che offre ai capelli 10 BENEFICI fondamentali di cui hanno bisogno.  TUTTI I BENEFICI IN UN UNICO PRODOTTO:  uniq ONE...  1 - è un protettore termico ideale durante il brushing e la stiratura  2 - è fantastico per lucidare i capelli e ridurre l'effetto crespo  3 - è un ottimo prodotto per riparare i capelli secchi e danneggiati  4 - è un protettore colore con filtri solari UVA e UVB  5 - è eccezionale per facilitare il brushing e la stiratura dei capelli  6 - è l'ideale per avere capelli morbidi e setosi  7 - è un prodotto che dona volume e corpo ai capelli  8 - è un ottimo districante per capelli  9 - è un prodotto che consente di fissare più a lungo l'acconciatura  10 - è un prodotto che previene le doppie punte  FACILE DA USARE E RISULTATI SORPRENDENTI  APPLICAZIONE:  - SUI CAPELLI UMIDI  Applicare sui capelli da una distanza di 20 cm, districare i capelli con un pettine, non sciacquare; usare il vostro prodotto per lo styling se desiderato; acconciare i capelli usando il vostro prodotto di finitura quotidiano se necessario.   IL RISULTATO  Capelli soffici, setosi,lucenti, protetti e non appesantiti.  - SUI CAPELLI ASCIUTTI  Spruzzare sul palmo della mano, distribuire sui capelli da metà lunghezza fino alle punte,non sciacquare; usare il vostro prodotto per lo styling se desiderato; ritoccare i capelli con la piastra o l'asciugacapelli se occorre; usare un prodotto di finitura se necessario.  IL RISULTATO  Ravviva la vostra acconciatura e dona una finitura duratura, morbida e setosa,senza appesantirla.  FORMATO: 150ml  +  UNIQ ONE MASCHERA 300ml  MASCHERA PER CAPELLI TUTTO IN UNO  Super10r Hair Mask uniq one offre ai capelli 10 BENEFICI fondamentali di cui hanno bisogno.  Rafforza i capelli dalle radici alle punte e li ripora alle condizioni naturali in soli pochi minuti.  Una formula innovativa che abbina i benefici delle migliori maschere del mondo.  Risultati eccezzionali, facile da sciacquare, ripara e nutre i capelli lasciandoli morbidi e setosi.  Previene rotture e doppie punte.  TUTTI I BENEFICI IN UN UNICO PRODOTTO:  uniq ONE...  1 - Ripara in profondità i capelli danneggiati  2 - Nutre intensamente  3 - Rinforza i capelli dalle radici alle punte  4 - Lucentezza incredibile  5 - Capelli setosi e morbidi  6 - Sensazionale effetto anti-crespo e districante  7 - Ultra idratante  8 - Assorbimento rapido in soli 3 minuti  9 - Effetto finale leggero con volume naturale  10 - Formula che non appesantisce  FACILE DA USARE E RISULTATI SORPRENDENTI  APPLICAZIONE:  - Distribuire sui capelli umidi  - Lasciare agire per 3 minuti  - Risciacquare completamente  IL RISULTATO  CAPELLI SOFFICI, RIPARATI, SETOSI, LUCENTI E PROTETTI  FORMATO: 300ml",
+      "cost": "10",
+      "price": "26.84",
+      "quantity": "12"
+    }
+  ]
+}
