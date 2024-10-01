@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5038/';
+const API_URL = 'https://api-production-1316.up.railway.app/';
 
 
 export const getProductList = async () => {
