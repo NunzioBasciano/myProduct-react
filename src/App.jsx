@@ -94,7 +94,7 @@ function App() {
                   product.barcode.toLowerCase().includes(filter))
                 .map((product) => {
                   return (
-                    <tr key={product.id}>
+                    <tr key={product._id}>
                       <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{product.name}</td>
                       <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">{product.brand}</td>
                       <td className="whitespace-nowrap px-1 py-2 text-gray-700 text-center">{product.barcode}</td>
@@ -104,19 +104,19 @@ function App() {
                       <td className="whitespace-nowrap px-4 py-2">
                         <div className="flex gap-4">
                           <NavLink
-                            to={`/products/${product.id}`}
+                            to={`/products/${product._id}`}
                             className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                           >
                             {labels.productTableDetail}
                           </NavLink>
                           <NavLink
-                            to={`/edit/${product.id}`}
+                            to={`/edit/${product._id}`}
                             className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                           >
                             {labels.productTableEditButton}
                           </NavLink>
                           <button
-                            onClick={() => handleDelete(product.id)}
+                            onClick={() => handleDelete(product._id)}
                             className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                           >
                             {labels.productTableDelete}

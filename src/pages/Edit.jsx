@@ -32,18 +32,21 @@ function Edit() {
     const handleEdit = async (body) => {
         try {
             setIsLoading(true);
-            const res = await editProduct({ ...body }, id);
+            const res = await editProduct(body, id); // Passa `id` come secondo argomento
             toast.success(`The product ${body.name} was edited`, {
                 position: "top-right"
             });
-            navigate(`/products/${id}`);
+            navigate(`/products/${id}`); // Naviga alla pagina del prodotto aggiornato
         } catch (error) {
-            toast.error(`it was not possible to edit the product ${body.name}`, {
+            toast.error(`It was not possible to edit the product ${body.name}`, {
                 position: "top-right"
             });
             setIsError({ message: error.message, isError: true });
+        } finally {
+            setIsLoading(false); // Assicurati di impostare `isLoading` a false dopo il tentativo
         }
-    }
+    };
+
 
     if (isLoading) return <p>is loading...</p>;
 

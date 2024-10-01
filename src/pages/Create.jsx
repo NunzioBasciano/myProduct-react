@@ -16,6 +16,7 @@ function Create() {
     const handleCreate = async (body) => {
         try {
             const res = await addProduct(body);
+            console.log(res);
             toast.success(`The product ${body.name} was created`, {
                 position: "top-right"
             });
