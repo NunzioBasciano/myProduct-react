@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import React from 'react'
 import { addProduct } from '../api/productClient'
 import { useNavigate } from 'react-router-dom'
@@ -13,6 +13,11 @@ function Create() {
 
     const [isError, setIsError] = useState({ message: "", isError: false });
 
+    /**
+     * Handles the creation of a new product by calling the addProduct function.
+     * @param {Object} body - The product data to be added.
+     * @returns {Promise<void>} A promise that resolves when the product is created.
+     */
     const handleCreate = async (body) => {
         try {
             const res = await addProduct(body);

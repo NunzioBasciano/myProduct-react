@@ -105,13 +105,13 @@ function App() {
                         <div className="flex gap-4">
                           <NavLink
                             to={`/products/${product._id}`}
-                            className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+                            className="no-underline inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                           >
                             {labels.productTableDetail}
                           </NavLink>
                           <NavLink
                             to={`/edit/${product._id}`}
-                            className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
+                            className="no-underline inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                           >
                             {labels.productTableEditButton}
                           </NavLink>

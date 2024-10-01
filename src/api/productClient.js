@@ -1,6 +1,10 @@
 const API_URL = 'https://api-production-1316.up.railway.app/';
 
 
+/**
+ * Fetches a list of products (notes).
+ * @returns {Promise<Array>} A promise that resolves to an array of product notes.
+ */
 export const getProductList = async () => {
     try {
         const response = await fetch(API_URL + 'api/myproduct/GetNotes/');
@@ -15,6 +19,11 @@ export const getProductList = async () => {
     }
 }
 
+/**
+ * Fetches the details of a specific product by its ID.
+ * @param {string} id - The ID of the product to fetch.
+ * @returns {Promise<Object>} A promise that resolves to the product details.
+ */
 export const getProductDetail = async (id) => {
     try {
         const response = await fetch(API_URL + `api/myproduct/GetNote/${id}`);
@@ -29,28 +38,45 @@ export const getProductDetail = async (id) => {
     }
 }
 
+/**
+ * Deletes a specific product by its ID.
+ * @param {string} id - The ID of the product to delete.
+ * @returns {Promise<Object>} A promise that resolves to the response data.
+ * @throws Will throw an error if the delete operation fails.
+ */
 export const deleteProduct = async (id) => {
     try {
-        // Effettua la richiesta DELETE per il prodotto
         const response = await fetch(API_URL + `api/myproduct/DeleteNotes/${id}`, {
             method: 'DELETE',
         });
 
-        // Verifica se la risposta è ok
         if (!response.ok) {
-            const errorData = await response.json(); // Ottieni il messaggio di errore
+            const errorData = await response.json();
             throw new Error(`Error deleting product: ${errorData.error || response.statusText}`);
         }
 
-        // Restituisci il risultato come JSON, se necessario
         return await response.json();
 
     } catch (error) {
-        console.error('Delete error:', error.message); // Logga l'errore per la diagnostica
-        throw new Error(error.message); // Rilancia l'errore per gestirlo altrove
+        console.error('Delete error:', error.message);
+        throw new Error(error.message);
     }
 }
 
+/**
+ * Adds a new product.
+ * @param {Object} body - The product data to add.
+ * @param {string} body.name - The name of the product.
+ * @param {string} body.brand - The brand of the product.
+ * @param {string} body.barcode - The barcode of the product.
+ * @param {string} body.image - The image URL of the product.
+ * @param {string} body.description - The description of the product.
+ * @param {number} body.cost - The cost of the product.
+ * @param {number} body.quantity - The quantity of the product.
+ * @param {number} body.price - The price of the product.
+ * @returns {Promise<Object>} A promise that resolves to the newly added product data.
+ * @throws Will throw an error if the add operation fails.
+ */
 export const addProduct = async (body) => {
     const product = {
         name: body.name,
@@ -78,7 +104,7 @@ export const addProduct = async (body) => {
             throw new Error(errorData.error || 'Something went wrong!');
         }
 
-        const data = await response.json(); // Modificato per gestire la risposta correttamente
+        const data = await response.json();
         return data;
 
     } catch (error) {
@@ -86,6 +112,13 @@ export const addProduct = async (body) => {
     }
 }
 
+/**
+ * Edits an existing product.
+ * @param {Object} body - The updated product data.
+ * @param {string} id - The ID of the product to edit.
+ * @returns {Promise<Object>} A promise that resolves to the updated product data.
+ * @throws Will throw an error if the edit operation fails.
+ */
 export const editProduct = async (body, id) => {
     const response = await fetch(API_URL + `api/myproduct/EditNote/${id}`, {
         method: 'PUT',
@@ -102,47 +135,3 @@ export const editProduct = async (body, id) => {
     return await response.json();
 };
 
-
-
-
-
-
-
-/* export const editProduct = async (body, id) => {
-
-
-    const productNoDetail = {
-        id,
-        name: body.name,
-        brand: body.brand,
-        barcode: body.barcode,
-        cost: body.cost,
-        quantity: body.quantity,
-        price: body.price
-    }
-
-    try {
-
-        await fetch(`http://localhost:3000/products/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(productNoDetail)
-        });
-
-        const data = await fetch(`http://localhost:3000/products-detail/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(body)
-        });
-        return data.json();
-
-    } catch (error) {
-        throw Error(error.message);
-    }
-}
-
- */

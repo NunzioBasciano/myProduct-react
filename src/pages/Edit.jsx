@@ -14,6 +14,11 @@ function Edit() {
     const [isError, setIsError] = useState({ message: "", isError: false });
     const [isLoading, setIsLoading] = useState(true);
 
+    /**
+    * Fetches the product details by ID.
+    * @param {string} id - The ID of the product to fetch.
+    * @returns {Promise<void>} A promise that resolves when the product details are fetched.
+    */
     const getProduct = async (id) => {
         try {
             const data = await getProductDetail(id);
@@ -29,21 +34,26 @@ function Edit() {
         getProduct(id);
     }, []);
 
+    /**
+   * Handles the editing of the product by calling the editProduct function.
+   * @param {Object} body - The updated product data.
+   * @returns {Promise<void>} A promise that resolves when the product is edited.
+   */
     const handleEdit = async (body) => {
         try {
             setIsLoading(true);
-            const res = await editProduct(body, id); // Passa `id` come secondo argomento
+            const res = await editProduct(body, id);
             toast.success(`The product ${body.name} was edited`, {
                 position: "top-right"
             });
-            navigate(`/products/${id}`); // Naviga alla pagina del prodotto aggiornato
+            navigate(`/products/${id}`);
         } catch (error) {
             toast.error(`It was not possible to edit the product ${body.name}`, {
                 position: "top-right"
             });
             setIsError({ message: error.message, isError: true });
         } finally {
-            setIsLoading(false); // Assicurati di impostare `isLoading` a false dopo il tentativo
+            setIsLoading(false);
         }
     };
 

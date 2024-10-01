@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ProductSkeleton from '../pages/ProductSkeleton';
 import ErrorComponent from "../components/errorComponent/ErrorComponent";
@@ -11,6 +11,10 @@ function ProductDetailPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState({ message: "", isError: false });
 
+    /**
+    * Fetches the product details based on the provided ID.
+    * @param {string} id - The ID of the product to fetch.
+    */
     const getProduct = async (id) => {
         try {
             const data = await getProductDetail(id);
@@ -70,6 +74,12 @@ function ProductDetailPage() {
                         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                             <div className="lg:pr-4">
                                 <div className="lg:max-w-lg">
+                                    <NavLink
+                                        to={`/`}
+                                        className="inline-block rounded bg-indigo-600 my-4 px-4 py-2 text-xs font-medium no-underline text-white hover:bg-indigo-700 "
+                                    >
+                                        {'home'}
+                                    </NavLink>
                                     <p className="text-base font-semibold leading-7 text-indigo-600">{product.brand}</p>
                                     <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
                                     <p className="mt-6 text-xl leading-8 text-gray-700">
@@ -87,7 +97,6 @@ function ProductDetailPage() {
                         </div>
                         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                             <div className="lg:pr-4">
-
                             </div>
                         </div>
                     </div>

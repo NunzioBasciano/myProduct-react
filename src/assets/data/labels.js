@@ -1,7 +1,6 @@
 export const labels = {
     productTableName: 'Name',
     productTableBrand: 'Brand',
-    productTableDescription: 'Description',
     productTableBarcode: 'Barcode',
     productTableCost: 'Cost',
     productTablePrice: 'Price',
@@ -19,5 +18,4 @@ export const labels = {
     isLoading: 'is Loading...',
     errorHuHo: "Hu-oh!",
     goBackHome: 'Go back home'
-
 }
